@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "279146522782",
+    "project_id": "child-safe-bus-tracker",
+    "storage_bucket": "child-safe-bus-tracker.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279146522782:android:90acffa2bd8288afc1f38f",
+        "android_client_info": {
+          "package_name": "com.childsafe.childsafe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzWBJ04NXz1Fr8lZqq1mVUjnys6sn9mIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:279146522782:android:f889b077f7f3da5bc1f38f",
+        "android_client_info": {
+          "package_name": "com.example.childsafe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzWBJ04NXz1Fr8lZqq1mVUjnys6sn9mIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
