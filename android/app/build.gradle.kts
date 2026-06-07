@@ -14,21 +14,19 @@ android {
     ndkVersion = flutter.ndkVersion
 
     compileOptions {
+        // Upgraded to Java 17 to match Kotlin and remove build warnings
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+        isCoreLibraryDesugaringEnabled = true
     }
-
+    
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_17.toString()
     }
 
-defaultConfig {
-        // Correct Kotlin Syntax uses '='
+    defaultConfig {
         applicationId = "com.childsafe.childsafe"
-        
-        // set minSdk to 23 directly
         minSdk = flutter.minSdkVersion
-        
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
@@ -48,4 +46,9 @@ defaultConfig {
 
 flutter {
     source = "../.."
+}
+
+dependencies {
+    // Required for flutter_local_notifications on older Android devices
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.3")
 }

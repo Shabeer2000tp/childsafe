@@ -59,4 +59,18 @@ class LocationService {
 
     return Geolocator.getPositionStream(locationSettings: locationSettings);
   }
+
+  // 5. NEW: Stop Location Updates
+  Future<void> stopLocationUpdates(String schoolId) async {
+    try {
+      await _db.collection('live_location').doc('bus_$schoolId').update({
+        'status': 'inactive',
+        'timestamp': FieldValue.serverTimestamp(),
+      });
+    } catch (e) {
+      // It's possible the document doesn't exist, so we can ignore errors
+      // or create it with an inactive status. For now, we'll just log.
+      print("Could not set bus status to inactive: $e");
+    }
+  }
 }
